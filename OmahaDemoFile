@@ -72,6 +72,7 @@ A). View GDD screen shots.
 B). Set up & Create Camera Arm
 C). Position a fixed camera & tag
 D). Write a small script.
+E). Prefab Camera.
 
 
 Part 6A).   View GDD screen shots.
@@ -101,8 +102,53 @@ Part 6D). Write a small script.
 	2). Hit play & Test script
 	3). Try changing camera angles/position while in play mode.  Please note: Copy Component from gear gizmo if you want to use those values to update the non-play mode.
 	
+Part 6E). Camera
+	1). Make a prefab from the Camera Arm
+	2). Test prefab (delete Camera Arm in the Hierarchy, then drag and drop Camera Arm from prefabs.) Play.
+	3). Be aware of unity 3d camera assets.  We are not using but they are there...
+	
+
+Part 7: Prototyping with Placeholders
+	1). Find a scren shot that has barriers or hidden areas.
+		https://www.vg247.com/2016/11/05/diablo-3-the-darkening-of-tristram-retro-update-will-be-an-annual-event/
+		(image 4th row, 2nd image) save locally.  C:\Tim\OmahaUnity3d
+	2). Select a block in the scene view.  (This will essentially be a "Billboard")
+		A). Rename the block to Billboard.
+		B). Change Scale: X=19.80; Y=11.14 ((Look at image properties))
+		C). Click and drag the scren shot image to the "Billboard"
+	3). Reconfig your blocks to be somewhat similar to your Billboard. 
+		A). This is simulating different terrain elevations and camera angles for your game.
+		B). Reconfigure your blocks, position, rotation, scale...
+		C). Once finished reconfiguring the blocks adjust the Main Camera if desired.
+	4). Time to add the enemies.
+		A). Assets/Standardassets/Characters/ThirdPersonCharacter/Models/Ethan - click and drag into the scene view.
+		B). Resize scale to .5
+		C). Create new material named "Red Enemy"
+		D). Color the Red Enemy to Red.
+		E). Drag and drop the new material on Ethan.
+		F). Rename Ethan to Enemy
+		G). Duplicate 4 additional Enemy & spread around area.
+	5). Add the Boss Enemy
+		A). Select Enemy and rename to "Enemy Boss"
+		B). Set scale to 1.5 X, Y & Z.
+	6). For fun - paint the sun glasses black.
+		A). Create new material Sun Glasses.
+		B). Select color black.
+		C). Drag and Drop Sun Glass material onto EthanGlasses of all Enemy and EnemyBoss.
+	7). Adjust Player movement.
+		A). Adjust varibales on Third Person Character script within the inspector.
+			1). Moving Turn Speed: from 360 to desired new value. (3600)
+			2). Stationary Turn Speed: from 180 to desired new value. (1800)
+			3). Anim Speed Multiplier: from 1 to (1.2)
+
+		
+		
+		
 	
 	
+	
+What's Next:
+1). 
 		
 
 	
