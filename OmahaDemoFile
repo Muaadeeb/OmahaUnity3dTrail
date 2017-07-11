@@ -22,7 +22,99 @@ Find what you like, and put that into your game.
 5). Visual Studio Community or VS Code
 
 5). Prototype your RPG.
-5A). Level layout.
+TODO List:
+
+A). Quickly setup Unity Project
+B). World Scale considerations.
+C). Import Ethan
+D). Layout a simple arena
+E). Challenge
+
+Part 5A: Quickly setup Unity Project
+	1). Details layout (preferred)
+	2). Assets: Create default folders (Materials, Prefabs, Scenes, Scripts)
+	3). Save the scene.
+	4). Commit to git.
+Part 5B: World Scale considerations.
+	1). import a cube to see scale.
+	2). rename cube to Ground.
+	3). rescale to x=100; z=100.
+	4). Ground  Position Y = -.5
+	4). Create material(rename to ground) - name it ground color it green (let's be easy on the eyes here.) drag to ground.
+
+Part 5C: Import Ethan
+	1). Assets..Import Characters..select all..Import]
+	2). Draq & Drop Ethan into Ground.
+		A). Standard Assets/Characters/ThirdPersonCharacter/Prefabs/ThirdPersonController
+		B). Reset to Origin.
+		C). Rename ThirdPersonController (Ethan) to Player.
+		D). Assign Tag "Player".
+		B). Control S to save. & Play.
+
+Part 5D). Layout a simple arena	
+	1). Create 3d Cube.  Note it is half way submerged.
+	2). Create empty game object rename to block. (reset transform/gear)
+	3). Drag Cube into Block (reset transform/gear)
+	4). Set Cube position to .5
+	5). Create prefab of Block. (drag and drop into prefab folder.)
+	6). create new material name it Block.
+	7). Drag Block material into the Block in scene view.
+	8). Click on block in Hierarchy then click on Apply (in the Inspector)
+	9). drag and drop several block prefabs into the scene.
+	10). Hot key tip: q, w, e, r, t: https://docs.unity3d.com/Manual/UnityHotkeys.html
+	11). Build a sample arena, include a ramp.
+	12). Clean up the hierarchy.
+			A). Create new game object.  Rename to Environment. Reset transform.
+			B). Drag and drop our Ground and all blocks to make them children of the Environment.
+
+6). A Simple (DIY) Follow Camera
+A). View GDD screen shots.
+B). Set up & Create Camera Arm
+C). Position a fixed camera & tag
+D). Write a small script.
+
+
+Part 6A).   View GDD screen shots.
+	1). "How to we want the camera to view our world/main character"
+	
+Part 6B). Set up & Create Camera Arm
+	1). Create GameObject. Reset to origin.(gear gizmo)
+	2). Rename to Camera Arm  ((This will act as an anchor object to the Player; Also fixes the issue of wild camera rotation if you were to just child the camera directly to the player.))
+	3). Child Main Camera to CameraArm.
+
+Part 6C). Position a fixed Camera
+	1). Click on Main Camera to view preview window.  (See how far away Player is...)
+	2). Move Main Camera to desired viewing position.
+	3). Rotate Main Camera to -60 (or to desired viewing angle).
+	-- My Main camera Transform is:
+		P: X=5.5, Y=3, Z=-3.5
+		R: X=0, Y=-60, Z=0
+		S: X=1, Y=1, Z=1
+	4). Tag Main Camera as MainCamera.
+
+Part 6D). Write a small script.
+	1). Create C# script named: CameraFollow
+		A). Attach to Camera Arm
+		B). Keeps Camera Arm at Player's Position
+		C). Use LateUpdate()
+	Source: 	C:\My.Git\OmahaUnity3dTrail\OmahaUnity3dDemoTemp\Assets\Scripts
+	2). Hit play & Test script
+	3). Try changing camera angles/position while in play mode.  Please note: Copy Component from gear gizmo if you want to use those values to update the non-play mode.
+	
+	
+	
+		
+
+	
+
+	
+	
+
+		
+	
+	
+	
+
 
 
 
